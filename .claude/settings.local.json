@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/das.sanjeeb/user-service/src/main/java/com/sage/userservice/controller)",
+      "Bash(mkdir -p /Users/das.sanjeeb/user-service/src/main/java/com/sage/userservice/model)",
+      "Bash(mkdir -p /Users/das.sanjeeb/user-service/src/main/java/com/sage/userservice/repository)",
+      "Bash(mkdir -p /Users/das.sanjeeb/user-service/src/main/java/com/sage/userservice/service)",
+      "Bash(mkdir -p /Users/das.sanjeeb/user-service/src/main/resources)"
+    ]
+  }
+}
