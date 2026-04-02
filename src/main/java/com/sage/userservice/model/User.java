@@ -1,38 +1,16 @@
 package com.sage.userservice.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
 public class User {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotBlank
-    @Column(nullable = false)
     private String name;
-
-    @NotBlank
-    @Email
-    @Column(nullable = false, unique = true)
     private String email;
-
-    public User() {
-    }
-
-    public User(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
 
     public Long getId() {
         return id;
