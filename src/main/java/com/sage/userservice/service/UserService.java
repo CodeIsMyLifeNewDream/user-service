@@ -39,4 +39,11 @@ public class UserService {
         User user = getUserById(id);
         userRepository.delete(user);
     }
+    
+    public User registerUser(User user) {
+        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
+            throw new RuntimeException("User with email " + user.getEmail() + " already exists");
+        }
+        return createUser(user);
+    }
 }

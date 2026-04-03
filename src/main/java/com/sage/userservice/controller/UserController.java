@@ -51,4 +51,13 @@ public class UserController {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
+    
+    @PostMapping("/register")
+    public ResponseEntity<User> registerUser(@Valid @RequestBody User user) {
+        try {
+            return ResponseEntity.status(HttpStatus.CREATED).body(userService.registerUser(user));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(null);
+        }
+    }
 }
